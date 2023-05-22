@@ -1,0 +1,191 @@
+.formacaoContainer {
+  background-color: #141414;
+}
+
+.formacao {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 70px;
+  padding: 120px 0;
+  position: relative;
+}
+
+.formacao::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  background: url(../img/detalhe.svg) no-repeat center;
+  bottom: -60px;
+  left: 0px;
+}
+
+.formacao .subtitulo {
+  color: #000;
+  max-width: 5ch;
+}
+
+.formacao-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  color: #a3a3a3;
+}
+
+.formacao-conteudo > p {
+  font-size: 1.5rem;
+}
+
+.formacao-conteudo p span {
+  color: #fff;
+}
+
+.formacoes-lista {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.formacao-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+
+  position: relative;
+
+  max-width: 20ch;
+  padding: 20px;
+
+  color: #a3a3a3;
+  background-color: #000;
+}
+
+.formacao-card::before {
+  content: "";
+  width: 5px;
+  height: 25px;
+  background: linear-gradient(
+    180deg,
+    rgba(182, 248, 41, 0.97) 0%,
+    #67dd0a 100%
+  );
+
+  position: absolute;
+  top: 20px;
+  left: -5px;
+  z-index: 2;
+}
+
+.especializacao {
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.curso {
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+.local_de_ensino {
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.cursos-intensivos {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.125rem;
+  gap: 20px;
+  position: relative;
+}
+
+.cursos-intensivos::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -4px;
+  left: -36px;
+  background-image: url(../img/cursos.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.linguas {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.125rem;
+  position: relative;
+}
+
+.linguas::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -4px;
+  left: -36px;
+  background-image: url(../img/idiomas.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cursos-intensivos-titulo,
+.linguas-titulo {
+  grid-column: 1 / -1;
+  color: #8f8e8e;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.cursos-intensivos-item,
+.linguas-item {
+  color: #fff;
+}
+
+.horas,
+.nivel-lingua {
+  color: #8f8e8e;
+}
+
+.nivel-lingua,
+.linguas-item {
+  display: inline-block;
+}
+
+.nivel-lingua::before {
+  content: "/ ";
+}
+
+@media (max-width: 800px) {
+  .formacao {
+    grid-template-columns: 1fr;
+    padding: 60px 0;
+  }
+
+  .formacao .subtitulo {
+    margin-bottom: 30px;
+    color: #fff;
+    max-width: initial;
+  }
+
+  .formacao p {
+    font-size: 1.125rem;
+  }
+
+  .linguas::before,
+  .cursos-intensivos::before {
+    position: initial;
+  }
+}

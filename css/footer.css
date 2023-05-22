@@ -1,0 +1,46 @@
+.footerContainer {
+  background-color: #000;
+}
+
+.footer {
+  padding: 120px 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.footer-texto {
+  color: #cccbcb;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  max-width: 50ch;
+}
+
+.footer-contato {
+  color: #fff;
+  font-size: 2rem;
+  justify-self: flex-end;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.direitosAutorais {
+  color: #8f8f8e;
+  font-size: 1.125rem;
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer-contato {
+    font-size: 1.5rem;
+    justify-self: flex-start;
+  }
+}
